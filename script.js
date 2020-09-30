@@ -79,7 +79,7 @@ $(document).ready(function(){
     console.log('question num :', questionNum);
     switch (questionNum) {
       case 1:
-        $(this).text() === 'Octobre' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+        $(this).text() === "Vol d'ordinateur portable" ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
       case 2:
         $(this).text() === 'DDOS' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
