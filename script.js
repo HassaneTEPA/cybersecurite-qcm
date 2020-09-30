@@ -36,11 +36,11 @@ $(document).ready(function(){
 
   function afficheScore(){
     $('.resultsActuel').css('opacity','1');
-    $('.resultsActuel').text(`✔️ : ${totalBonneReponse}/10`);
+    $('.resultsActuel').text(`✔️ : ${totalBonneReponse}/7`);
   }
 
   function verifFini() {
-    if (repondu < 10) {
+    if (repondu < 6) {
       console.log(totalBonneReponse);
     }
     else {
@@ -50,23 +50,23 @@ $(document).ready(function(){
       else if (totalBonneReponse === 1){
         $('.msgFinal').text(`Vous avez eu ${totalBonneReponse} bonne réponse 📙, c'est mieux que 0 mais pas glorieux !`)
       }
-      else if (totalBonneReponse > 1 && totalBonneReponse < 5){
+      else if (totalBonneReponse > 1 && totalBonneReponse < 3){
         $('.msgFinal').text(`Vous avez eu ${totalBonneReponse} bonnes réponses 📒, c'est en dessous de la moyenne !`)
       }
-      else if (totalBonneReponse >= 5 && totalBonneReponse < 8){
+      else if (totalBonneReponse >= 3 && totalBonneReponse < 4){
         $('.msgFinal').text(`Vous avez eu ${totalBonneReponse} bonnes réponses 📘, c'est pas mal !`)
       }
-      else if (totalBonneReponse >= 8 && totalBonneReponse < 9){
+      else if (totalBonneReponse >= 5 && totalBonneReponse < 6){
         $('.msgFinal').text(`Vous avez eu ${totalBonneReponse} bonnes réponses 📘, c'est un très bon score !`)
       }
-      else if (totalBonneReponse === 10){
+      else if (totalBonneReponse === 7){
         $('.msgFinal').text(`Vous avez eu ${totalBonneReponse} bonnes réponses 🏆, un sans faute ! 🎊 FÉLICITATIONS 🎊`)
       }
     }
   }
 
   function whichQuestion(question) {
-    for (let i = 0; i<=10; i++) {
+    for (let i = 0; i<=7; i++) {
       if (question.hasClass(`${i}`)) {
         questionNum = i;
       }
@@ -82,32 +82,23 @@ $(document).ready(function(){
         $(this).text() === "Vol d'ordinateur portable" ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
       case 2:
-        $(this).text() === 'DDOS' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+        $(this).text() === "C'est quand un pirate essaie de me soutirer des informations en essayant de me tromper" ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
       case 3:
-        $(this).text() === 'GitHub' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+        $(this).text() === 'Mes informations de connexion' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
       case 4:
-        $(this).text() === 'Phising' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+        $(this).text() === 'Utiliser des caracteres spéciaux' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
       case 5:
-        $(this).text() === 'un Virtual Proxy Network (VPN)' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+        $(this).text() === 'https://monsite.nc' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
       case 6:
-      $(this).text() === 'Ransomware' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+      $(this).text() === 'Non' ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;  
       case 7:
-        $(this).text() === 'facteurs'  ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
+        $(this).text() === 'Non'  ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
         break;
-      case 8:
-        $(this).text() === 'Ils peuvent être volées'  ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
-        break;
-      case 9:
-        $(this).text() === 'son empreinte'  ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
-        break;
-      case 10:
-        $(this).text() === '30'  ? bonneReponse(questionNum) : mauvaiseReponse(questionNum);
-        break;  
     }
   })
 
